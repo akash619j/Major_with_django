@@ -1,0 +1,11 @@
+{% extends 'main_app/base.html' %}
+{% block main_content %}
+
+<h1>Upload a youtube video!</h1>
+<form action="{% url 'main_app:video_page' %}" method="post">
+{% csrf_token %}
+  <input type="text" name="linkvid" placeholder="URL TO VIDEO" size="50" ><br>
+  <input type="submit" class="btn btn-success"value="Let's Go!">
+</form>
+{% endblock %}
+

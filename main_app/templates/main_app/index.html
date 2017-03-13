@@ -1,0 +1,11 @@
+{% extends 'main_app/base.html' %}
+{% block main_content %}
+<h1>Video Tagger Using Deep Learning </h1>
+<br>
+<form action="{% url 'main_app:discover' %}" method="post">
+{% csrf_token %}
+  <input type="submit" class="btn btn-success"value="Discover">
+</form>
+
+{% endblock %}
+
